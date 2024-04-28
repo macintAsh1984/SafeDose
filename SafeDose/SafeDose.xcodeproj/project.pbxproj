@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		238D5B582BDDE355009DA564 /* Directions.png in Resources */ = {isa = PBXBuildFile; fileRef = 238D5B572BDDE355009DA564 /* Directions.png */; };
 		238D5B5A2BDDE35E009DA564 /* ActiveIngredients.png in Resources */ = {isa = PBXBuildFile; fileRef = 238D5B592BDDE35E009DA564 /* ActiveIngredients.png */; };
-		AB6F8C5A2BDEB22D0080A76C /* MedicationStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6F8C592BDEB22D0080A76C /* MedicationStruct.swift */; };
 		ABD044752BDDBAA500BD0FA4 /* SafeDoseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD044742BDDBAA500BD0FA4 /* SafeDoseApp.swift */; };
 		ABD044792BDDBAA600BD0FA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABD044782BDDBAA600BD0FA4 /* Assets.xcassets */; };
 		ABD0447C2BDDBAA600BD0FA4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABD0447B2BDDBAA600BD0FA4 /* Preview Assets.xcassets */; };
@@ -53,7 +52,6 @@
 /* Begin PBXFileReference section */
 		238D5B572BDDE355009DA564 /* Directions.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Directions.png; sourceTree = "<group>"; };
 		238D5B592BDDE35E009DA564 /* ActiveIngredients.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ActiveIngredients.png; sourceTree = "<group>"; };
-		AB6F8C592BDEB22D0080A76C /* MedicationStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationStruct.swift; sourceTree = "<group>"; };
 		ABD044712BDDBAA500BD0FA4 /* SafeDose.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SafeDose.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABD044742BDDBAA500BD0FA4 /* SafeDoseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeDoseApp.swift; sourceTree = "<group>"; };
 		ABD044782BDDBAA600BD0FA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -130,7 +128,6 @@
 				ABD044942BDDCE9100BD0FA4 /* HomeScreen.swift */,
 				ABD044862BDDCDAA00BD0FA4 /* EnterMedicationName.swift */,
 				ABD0448A2BDDCDF000BD0FA4 /* ActiveIngredientsScanInfo.swift */,
-				AB6F8C592BDEB22D0080A76C /* MedicationStruct.swift */,
 				ABD044882BDDCDB900BD0FA4 /* ScanActiveIngredients.swift */,
 				ABD044902BDDCE2B00BD0FA4 /* EnterDailyDosage.swift */,
 				ABD044922BDDCE3D00BD0FA4 /* DosageSummary.swift */,
@@ -263,7 +260,6 @@
 				ABD044752BDDBAA500BD0FA4 /* SafeDoseApp.swift in Sources */,
 				ABD0448B2BDDCDF000BD0FA4 /* ActiveIngredientsScanInfo.swift in Sources */,
 				ABD044952BDDCE9100BD0FA4 /* HomeScreen.swift in Sources */,
-				AB6F8C5A2BDEB22D0080A76C /* MedicationStruct.swift in Sources */,
 				ABD044912BDDCE2B00BD0FA4 /* EnterDailyDosage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

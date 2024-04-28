@@ -28,18 +28,48 @@ var dosageData: [DosageAmount] = [
 
 struct DosageSummary: View {
     @State var birdAmt = String()
+    @State var addSymptoms = false
     var body: some View {
+        NavigationStack {
             VStack {
-                Chart(dosageData) { element in
-                    BarMark (
-                        x: .value("Day", element.day),
-                        y: .value("Dosage Per Day", element.amount)
-                    )
-                    .foregroundStyle(element.color)
+                    HStack {
+                        Spacer()
+                        Menu {
+                            Button {
+                                addSymptoms = true
+                            } label: {
+                                Label("Add Symptoms", systemImage: "plus")
+                                    .font(.title)
+                                    .padding(5)
+                            }
+                        } label: {
+                            Image(systemName: "plus")
+                                .font(.title)
+                                .foregroundColor(.pink)
+                                .padding(5)
+                        }
+                    } // End of menu options
+                    
+                    Chart(dosageData) { element in
+                        BarMark (
+                            x: .value("Day", element.day),
+                            y: .value("Dosage Per Day", element.amount)
+                        )
+                        .foregroundStyle(element.color)
+                    }
+                    
                 }
-                
-            }
             .padding()
+            .preferredColorScheme(.light)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(
+                LinearGradient(gradient: Gradient(colors: [.pink, .red]), startPoint: .leading, endPoint: .trailing)
+                    .opacity(0.5)
+            )
+            .sheet(isPresented: $addSymptoms) {
+                ScanActiveIngredients()
+            }
+        }
 
     }
     
