@@ -27,6 +27,7 @@ struct ScanActiveIngredients: View {
     ]
     
     @State var symptoms = false
+    @State var seeDoc = false
     @State var shallowBreathing = false
     @State var confusion = false
     @State var lessenedAlertness = false
@@ -34,6 +35,7 @@ struct ScanActiveIngredients: View {
     @State var smallPupils = false
     @State var blueSkin = false
     @State var count = 0
+    @State var countSymp = 0
     var body: some View {
         NavigationStack {
             VStack {
@@ -162,8 +164,9 @@ struct ScanActiveIngredients: View {
                         count = count + 1
                     }
                     if(count > 2){
-                        symptoms = true
+                        seeDoc = true
                     }
+                    symptoms = true
                 } label: {
                     Text("Done")
                         .fontWeight(.semibold)
@@ -181,8 +184,11 @@ struct ScanActiveIngredients: View {
                 LinearGradient(gradient: Gradient(colors: [.pink, .red]), startPoint: .leading, endPoint: .trailing)
                     .opacity(0.5)
             )
-            .navigationDestination(isPresented: $symptoms) {
-                DosageSummary()
+            .alert(isPresented: $seeDoc){
+                Alert(
+                    title: Text("SafeDose Alert"),
+                    message: Text("Based on your symptoms its recommended that you see a doctor.")
+                )
             }
         }
     }
