@@ -10,6 +10,7 @@ import SwiftUI
 struct EnterMedicationName: View {
     @State var medicationName = String()
     @State var navigateToScanInfo = false
+    @EnvironmentObject var viewModel: AuthViewModel
     
     var body: some View {
         NavigationStack {
@@ -23,7 +24,17 @@ struct EnterMedicationName: View {
                     .background()
                     .cornerRadius(10.0)
                 Button {
-                    navigateToScanInfo = true
+                    Task {
+                        do {
+                            try await viewModel.saveData(name: medicationName)
+                            navigateToScanInfo = true
+                        }catch {
+                            print("Error sigining in")
+                        }
+                        
+                    }
+                    
+                    
                 } label: {
                     Text("Enter")
                         .fontWeight(.semibold)
@@ -42,12 +53,12 @@ struct EnterMedicationName: View {
                     .opacity(0.5)
             )
             .navigationDestination(isPresented: $navigateToScanInfo) {
-               ActiveIngredientsScanInfo()
+                ActiveIngredientsScanInfo(medicationName: $medicationName)
             }
         }
      }
 }
 
-#Preview {
-    EnterMedicationName()
-}
+//#Preview {
+//    EnterMedicationName()
+//}

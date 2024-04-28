@@ -8,11 +8,60 @@
 import SwiftUI
 
 struct EnterDailyDosage: View {
+    @Binding var medicineName: String
+    @State var dosage = String()
+    @State var dosageEntered = false
+    @EnvironmentObject var viewModel: AuthViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        //how much did they take today?
+        NavigationStack {
+            VStack {
+                Text("How much dosage did you take today?")
+                    .font(.title)
+                    .fontWeight(.semibold)
+                    .multilineTextAlignment(.center)
+                Spacer()
+                    .frame(height: 20)
+                
+                TextField("Dosage (e.g. 5 mg)", text: $dosage)
+                    .padding(.all)
+                    .background()
+                    .cornerRadius(10.0)
+                Spacer()
+                    .frame(height: 20)
+                
+                Button {
+                    
+                    Task {
+                        await viewModel.savecurrentdosage(currdosage: dosage)
+                        dosageEntered = true
+                    }
+                } label: {
+                    Text("Enter Dosage")
+                        .fontWeight(.semibold)
+                        .foregroundColor(.white)
+                        .frame(maxWidth: .infinity)
+                }
+                .buttonStyle(.borderedProminent)
+                .tint(Color("PastelSalmon"))
+                .controlSize(.large)
+            } //end of Vstack
+            .padding()
+            .ignoresSafeArea(.keyboard)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(
+                LinearGradient(gradient: Gradient(colors: [.pink, .red]), startPoint: .leading, endPoint: .trailing)
+                    .opacity(0.5)
+            )
+            .navigationDestination(isPresented: $dosageEntered) {
+                DosageSummary(Dosage: $dosage, medicineName: $medicineName)
+            }
+        }
     }
+    
 }
 
-#Preview {
-    EnterDailyDosage()
-}
+//#Preview {
+//    EnterDailyDosage()
+//}
