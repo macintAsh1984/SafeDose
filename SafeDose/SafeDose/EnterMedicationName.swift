@@ -8,9 +8,44 @@
 import SwiftUI
 
 struct EnterMedicationName: View {
+    @State var medicationName = String()
+    @State var navigateToScanInfo = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+        NavigationStack {
+            VStack {
+                Text("Enter Medication Name")
+                    .font(.largeTitle)
+                    .fontWeight(.semibold)
+                    .multilineTextAlignment(.center)
+                TextField("Medication Name", text: $medicationName)
+                    .padding(.all)
+                    .background()
+                    .cornerRadius(10.0)
+                Button {
+                    navigateToScanInfo = true
+                } label: {
+                    Text("Enter")
+                        .fontWeight(.semibold)
+                        .foregroundColor(.white)
+                        .frame(maxWidth: .infinity)
+                }
+                .buttonStyle(.borderedProminent)
+                .tint(.pink)
+                .controlSize(.large)
+            } //end of Vstack
+            .padding()
+            .preferredColorScheme(.light)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(
+                LinearGradient(gradient: Gradient(colors: [.pink, .red]), startPoint: .leading, endPoint: .trailing)
+                    .opacity(0.5)
+            )
+            .navigationDestination(isPresented: $navigateToScanInfo) {
+               ActiveIngredientsScanInfo()
+            }
+        }
+     }
 }
 
 #Preview {
