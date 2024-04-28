@@ -17,7 +17,7 @@ struct DosageAmount : Identifiable {
 }
 
 var dosageData: [DosageAmount] = [
-    .init(day: "Sun", amount: 4, color: .blue),
+    .init(day: "Sun", amount: 0, color: .blue),
     .init(day: "Mon", amount: 0, color: .red),
     .init(day: "Tue", amount: 0, color: .green),
     .init(day: "Wed", amount: 0, color: .orange),
@@ -92,7 +92,7 @@ struct DosageSummary: View {
 
                 Task {
                     await viewModel.Takecurrdosage(medicineName: medicineName, currdosage: Dosage)
-                    //recordBirdCount()
+                    recordBirdCount()
                 }
             }
         }
