@@ -9,9 +9,9 @@ import SwiftUI
 
 struct ActiveIngredientsScanInfo: View {
     @Binding var medicationName: String
-    @State var activeIngredients = String()
-    @State var dosage = String()
-    @State var directions = String()
+    @State var activeIngredients = "active ingredients"
+    @State var dosage = "dosage"
+    @State var directions = "directions"
     @State var confirmInfo = false
     @State var showScanner = false
     
@@ -103,7 +103,7 @@ struct ActiveIngredientsScanInfo: View {
         .ignoresSafeArea(.keyboard)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .navigationDestination(isPresented: $confirmInfo) {
-            HomeScreen()
+            HomeScreen(medicineName: $medicationName, dosage: $dosage, directions: $directions)
         }
         .background(
             LinearGradient(gradient: Gradient(colors: [.pink, .red]), startPoint: .leading, endPoint: .trailing)
