@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		238D5B582BDDE355009DA564 /* Directions.png in Resources */ = {isa = PBXBuildFile; fileRef = 238D5B572BDDE355009DA564 /* Directions.png */; };
+		238D5B5A2BDDE35E009DA564 /* ActiveIngredients.png in Resources */ = {isa = PBXBuildFile; fileRef = 238D5B592BDDE35E009DA564 /* ActiveIngredients.png */; };
 		ABD044752BDDBAA500BD0FA4 /* SafeDoseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD044742BDDBAA500BD0FA4 /* SafeDoseApp.swift */; };
 		ABD044792BDDBAA600BD0FA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABD044782BDDBAA600BD0FA4 /* Assets.xcassets */; };
 		ABD0447C2BDDBAA600BD0FA4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABD0447B2BDDBAA600BD0FA4 /* Preview Assets.xcassets */; };
@@ -50,6 +52,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		238D5B572BDDE355009DA564 /* Directions.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Directions.png; sourceTree = "<group>"; };
+		238D5B592BDDE35E009DA564 /* ActiveIngredients.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ActiveIngredients.png; sourceTree = "<group>"; };
 		ABD044712BDDBAA500BD0FA4 /* SafeDose.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SafeDose.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABD044742BDDBAA500BD0FA4 /* SafeDoseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeDoseApp.swift; sourceTree = "<group>"; };
 		ABD044782BDDBAA600BD0FA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -135,6 +139,8 @@
 				ABD044922BDDCE3D00BD0FA4 /* DosageSummary.swift */,
 				ABD044962BDDDA0E00BD0FA4 /* GoogleService-Info.plist */,
 				ABD044782BDDBAA600BD0FA4 /* Assets.xcassets */,
+				238D5B572BDDE355009DA564 /* Directions.png */,
+				238D5B592BDDE35E009DA564 /* ActiveIngredients.png */,
 				ABD0447A2BDDBAA600BD0FA4 /* Preview Content */,
 			);
 			path = SafeDose;
@@ -239,8 +245,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABD0447C2BDDBAA600BD0FA4 /* Preview Assets.xcassets in Resources */,
+				238D5B582BDDE355009DA564 /* Directions.png in Resources */,
 				ABD044792BDDBAA600BD0FA4 /* Assets.xcassets in Resources */,
 				ABD044972BDDDA0E00BD0FA4 /* GoogleService-Info.plist in Resources */,
+				238D5B5A2BDDE35E009DA564 /* ActiveIngredients.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,7 +402,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SafeDose/Preview Content\"";
-				DEVELOPMENT_TEAM = LK4997QHS7;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -423,7 +431,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SafeDose/Preview Content\"";
-				DEVELOPMENT_TEAM = LK4997QHS7;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
