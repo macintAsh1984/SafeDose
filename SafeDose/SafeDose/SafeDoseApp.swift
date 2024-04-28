@@ -11,7 +11,7 @@ import SwiftUI
 struct SafeDoseApp: App {
     var body: some Scene {
         WindowGroup {
-            EnterMedicationName()
+            ActiveIngredientsScanInfo()
         }
     }
 }
