@@ -63,14 +63,14 @@ struct ActiveIngredientsScanInfo: View {
             Spacer()
                 .frame(height: 20)
             
-            TextField("Dosage", text: $dosage)
+            TextField("Dosage (e.g. 5 mg)", text: $dosage)
                 .padding(.all)
                 .background()
                 .cornerRadius(10.0)
             Spacer()
                 .frame(height: 20)
             
-            TextField("Directions", text: $directions)
+            TextField("Directions (e.g. Take two pills a day)", text: $directions)
                 .padding(.all)
                 .background()
                 .cornerRadius(10.0)

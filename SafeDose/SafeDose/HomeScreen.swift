@@ -12,9 +12,28 @@ struct HomeScreen: View {
     @Binding var dosage: String
     @Binding var directions: String
     @State var showInfo = false
+    @State var addMedication = false
     var body: some View {
         //has the medicine name which opens to the question
-        VStack{
+        VStack {
+            HStack {
+                Spacer()
+                Menu {
+                    Button {
+                        addMedication = true
+                    } label: {
+                        Label("Add Medication", systemImage: "plus")
+                            .font(.title)
+                            .padding(5)
+                    }
+                } label: {
+                    Image(systemName: "plus")
+                        .font(.title)
+                        .foregroundColor(.pink)
+                        .padding(5)
+            }
+            } // End of menu options
+            
             Form {
                 Section {
                     NavigationLink(destination: DosageSummary()) {
@@ -62,8 +81,8 @@ struct HomeScreen: View {
         .padding()
         .ignoresSafeArea(.keyboard)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .navigationDestination(isPresented: $showInfo) {
-            //
+        .sheet(isPresented: $addMedication) {
+            EnterMedicationName()
         }
         .background(
             LinearGradient(gradient: Gradient(colors: [.pink, .red]), startPoint: .leading, endPoint: .trailing)
