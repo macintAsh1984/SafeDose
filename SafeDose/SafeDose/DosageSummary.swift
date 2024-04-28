@@ -28,6 +28,8 @@ var dosageData: [DosageAmount] = [
 
 struct DosageSummary: View {
     @State var birdAmt = String()
+    @State var medicine = "Claritin"
+    @State var percent = 30
     @State var addSymptoms = false
     var body: some View {
         NavigationStack {
@@ -57,6 +59,13 @@ struct DosageSummary: View {
                         )
                         .foregroundStyle(element.color)
                     }
+                
+                Text("Your dosage for \(medicine) was \(percent)% higher than recommended.")
+                    .font(.title2)
+                    .fontWeight(.semibold)
+                    .multilineTextAlignment(.center)
+                Spacer()
+                    .frame(height: 20)
                     
                 }
             .padding()

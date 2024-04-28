@@ -14,7 +14,7 @@
 		ABD0447C2BDDBAA600BD0FA4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABD0447B2BDDBAA600BD0FA4 /* Preview Assets.xcassets */; };
 		ABD044852BDDCCC500BD0FA4 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD044842BDDCCC500BD0FA4 /* RootView.swift */; };
 		ABD044872BDDCDAA00BD0FA4 /* EnterMedicationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD044862BDDCDAA00BD0FA4 /* EnterMedicationName.swift */; };
-		ABD044892BDDCDB900BD0FA4 /* ScanActiveIngredients.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD044882BDDCDB900BD0FA4 /* ScanActiveIngredients.swift */; };
+		ABD044892BDDCDB900BD0FA4 /* Symptoms.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD044882BDDCDB900BD0FA4 /* Symptoms.swift */; };
 		ABD0448B2BDDCDF000BD0FA4 /* ActiveIngredientsScanInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD0448A2BDDCDF000BD0FA4 /* ActiveIngredientsScanInfo.swift */; };
 		ABD044912BDDCE2B00BD0FA4 /* EnterDailyDosage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD044902BDDCE2B00BD0FA4 /* EnterDailyDosage.swift */; };
 		ABD044932BDDCE3D00BD0FA4 /* DosageSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD044922BDDCE3D00BD0FA4 /* DosageSummary.swift */; };
@@ -58,7 +58,7 @@
 		ABD0447B2BDDBAA600BD0FA4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		ABD044842BDDCCC500BD0FA4 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		ABD044862BDDCDAA00BD0FA4 /* EnterMedicationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterMedicationName.swift; sourceTree = "<group>"; };
-		ABD044882BDDCDB900BD0FA4 /* ScanActiveIngredients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanActiveIngredients.swift; sourceTree = "<group>"; };
+		ABD044882BDDCDB900BD0FA4 /* Symptoms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symptoms.swift; sourceTree = "<group>"; };
 		ABD0448A2BDDCDF000BD0FA4 /* ActiveIngredientsScanInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveIngredientsScanInfo.swift; sourceTree = "<group>"; };
 		ABD044902BDDCE2B00BD0FA4 /* EnterDailyDosage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterDailyDosage.swift; sourceTree = "<group>"; };
 		ABD044922BDDCE3D00BD0FA4 /* DosageSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DosageSummary.swift; sourceTree = "<group>"; };
@@ -128,7 +128,7 @@
 				ABD044942BDDCE9100BD0FA4 /* HomeScreen.swift */,
 				ABD044862BDDCDAA00BD0FA4 /* EnterMedicationName.swift */,
 				ABD0448A2BDDCDF000BD0FA4 /* ActiveIngredientsScanInfo.swift */,
-				ABD044882BDDCDB900BD0FA4 /* ScanActiveIngredients.swift */,
+				ABD044882BDDCDB900BD0FA4 /* Symptoms.swift */,
 				ABD044902BDDCE2B00BD0FA4 /* EnterDailyDosage.swift */,
 				ABD044922BDDCE3D00BD0FA4 /* DosageSummary.swift */,
 				ABD044962BDDDA0E00BD0FA4 /* GoogleService-Info.plist */,
@@ -256,7 +256,7 @@
 				ABD044932BDDCE3D00BD0FA4 /* DosageSummary.swift in Sources */,
 				ABD044872BDDCDAA00BD0FA4 /* EnterMedicationName.swift in Sources */,
 				ABD044852BDDCCC500BD0FA4 /* RootView.swift in Sources */,
-				ABD044892BDDCDB900BD0FA4 /* ScanActiveIngredients.swift in Sources */,
+				ABD044892BDDCDB900BD0FA4 /* Symptoms.swift in Sources */,
 				ABD044752BDDBAA500BD0FA4 /* SafeDoseApp.swift in Sources */,
 				ABD0448B2BDDCDF000BD0FA4 /* ActiveIngredientsScanInfo.swift in Sources */,
 				ABD044952BDDCE9100BD0FA4 /* HomeScreen.swift in Sources */,
