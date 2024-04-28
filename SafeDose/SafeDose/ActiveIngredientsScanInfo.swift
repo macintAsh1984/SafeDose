@@ -8,29 +8,102 @@
 import SwiftUI
 
 struct ActiveIngredientsScanInfo: View {
-    @State var Scan = false
+    @Binding var medicationName: String
+    @State var activeIngredients = String()
+    @State var dosage = String()
+    @State var directions = String()
+    @State var confirmInfo = false
+    @State var showScanner = false
+    
     var body: some View {
-        VStack{
+        VStack (spacing: 0) {
             Text("Enter Active Ingredient Information")
-            Image("ActiveIngredients")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 250, height: 250)
-            Button ("Scan") {
-                //Scan
-                Scan = true;
+                .font(.title)
+                .fontWeight(.semibold)
+                .multilineTextAlignment(.center)
+            Spacer()
+                .frame(height: 20)
+            
+//            VStack (spacing: 5){
+//                Color.clear
+//                    .overlay{
+//                        VStack (alignment: .leading) {
+//                                Image("ActiveIngredients")
+//                                    .resizable()
+//                                    .aspectRatio(contentMode: .fit)
+//                                    .frame(width: 200, height: 200)
+//
+//
+//                                Image("Directions")
+//                                    .resizable()
+//                                    .aspectRatio(contentMode: .fit)
+//                                    .frame(width: 200, height: 200)
+//
+//                        }
+//                        .padding(.horizontal, 20)
+//                }
+//            }
+            
+            Text("Enter Manually")
+                        .fontWeight(.semibold)
+                    Spacer()
+                        .frame(height: 20)
+            
+            TextField("Medication Name", text: $medicationName)
+                .padding(.all)
+                .background()
+                .cornerRadius(10.0)
+            Spacer()
+                .frame(height: 20)
+            
+            TextField("Active Ingredients", text: $activeIngredients)
+                .padding(.all)
+                .background()
+                .cornerRadius(10.0)
+            Spacer()
+                .frame(height: 20)
+            
+            TextField("Dosage", text: $dosage)
+                .padding(.all)
+                .background()
+                .cornerRadius(10.0)
+            Spacer()
+                .frame(height: 20)
+            
+            TextField("Directions", text: $directions)
+                .padding(.all)
+                .background()
+                .cornerRadius(10.0)
+            Spacer()
+                .frame(height: 20)
+            
+            Button {
+                showScanner = true
+            } label: {
+                Label("Or Scan Medication", systemImage: "text.viewfinder")
+                    .fontWeight(.medium)
+                    .frame(maxWidth: .infinity)
             }
-            .padding(.horizontal, 150)
-            .padding(.vertical, 20)
-            .background(Color("PastelSalmon"))
-            .foregroundColor(Color("PastelWhite"))
-            .clipShape(RoundedRectangle(cornerRadius: 10.0, style: .continuous))
-            .frame(width: 400, height: 100)
+            Spacer()
+                .frame(height: 20)
+            
+            Button {
+                confirmInfo = true
+            } label: {
+                Text("Confirm Active Ingredients")
+                    .fontWeight(.semibold)
+                    .foregroundColor(.white)
+                    .frame(maxWidth: .infinity)
+            }
+            .buttonStyle(.borderedProminent)
+            .tint(Color("PastelSalmon"))
+            .controlSize(.large)
         }
+        .padding()
         .ignoresSafeArea(.keyboard)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .navigationDestination(isPresented: $Scan) {
-            //Integrate the scanner
+        .navigationDestination(isPresented: $confirmInfo) {
+            HomeScreen()
         }
         .background(
             LinearGradient(gradient: Gradient(colors: [.pink, .red]), startPoint: .leading, endPoint: .trailing)
@@ -40,5 +113,5 @@ struct ActiveIngredientsScanInfo: View {
 }
 
 #Preview {
-    ActiveIngredientsScanInfo()
+    ActiveIngredientsScanInfo(medicationName: .constant("hehe"))
 }

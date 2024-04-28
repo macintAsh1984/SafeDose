@@ -42,7 +42,7 @@ struct EnterMedicationName: View {
                     .opacity(0.5)
             )
             .navigationDestination(isPresented: $navigateToScanInfo) {
-               ActiveIngredientsScanInfo()
+                ActiveIngredientsScanInfo(medicationName: $medicationName)
             }
         }
      }
